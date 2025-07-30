@@ -365,16 +365,15 @@
             <h2 class="download-title">🎨 Download & Frame Collection</h2>
             <p class="download-text">
                 Love these mountain paintings? Download high-quality prints perfect for framing! 
-                Each painting is available as a print-ready PDF, or get the complete collection.
+                Get the complete collection with all 10 beautiful mountain landscapes.
             </p>
             <div class="download-buttons">
-                <input type="file" id="pdfUpload" accept=".pdf" style="display: none;">
-                <button class="upload-btn" onclick="document.getElementById('pdfUpload').click()">
-                    📁 Upload Your PDF Collection
-                </button>
-                <a href="#" class="download-btn full-collection" onclick="downloadFullCollection()">
+                <a href="./MY mountain painting book!.pdf" class="download-btn full-collection" download="Mountain_Paintings_Collection.pdf">
                     📚 Download Full Collection (PDF)
                 </a>
+                <button class="upload-btn" onclick="window.open('./MY mountain painting book!.pdf', '_blank')">
+                    👁️ Preview Collection Online
+                </button>
             </div>
         </div>
 
@@ -382,10 +381,10 @@
             <div class="upload-text">
                 Want to see the paintings displayed? Upload images to bring this gallery to life!
             </div>
-            <input type="file" id="imageUpload" multiple accept="image/*" style="display: none;">
-            <button class="upload-btn" onclick="document.getElementById('imageUpload').click()">
+            <button class="upload-btn" onclick="triggerImageUpload()">
                 🖼️ Choose Display Images
             </button>
+            <input type="file" id="imageUpload" multiple accept="image/*" style="display: none;">
         </div>
 
         <div class="gallery" id="gallery">
@@ -546,30 +545,34 @@
         let uploadedImages = {};
         let pdfCollection = null;
 
-        document.getElementById('imageUpload').addEventListener('change', function(e) {
-            const files = e.target.files;
-            const gallery = document.getElementById('gallery');
-            const cards = gallery.querySelectorAll('.painting-card');
-            
-            for (let i = 0; i < Math.min(files.length, cards.length); i++) {
-                const file = files[i];
-                const reader = new FileReader();
+        // Check if element exists before adding event listener
+        const imageUploadElement = document.getElementById('imageUpload');
+        if (imageUploadElement) {
+            imageUploadElement.addEventListener('change', function(e) {
+                const files = e.target.files;
+                const gallery = document.getElementById('gallery');
+                const cards = gallery.querySelectorAll('.painting-card');
                 
-                reader.onload = function(e) {
-                    const card = cards[i];
-                    const imageDiv = card.querySelector('.painting-image');
+                for (let i = 0; i < Math.min(files.length, cards.length); i++) {
+                    const file = files[i];
+                    const reader = new FileReader();
                     
-                    imageDiv.style.backgroundImage = `url(${e.target.result})`;
-                    imageDiv.style.backgroundSize = 'cover';
-                    imageDiv.style.backgroundPosition = 'center';
-                    imageDiv.innerHTML = '';
+                    reader.onload = function(e) {
+                        const card = cards[i];
+                        const imageDiv = card.querySelector('.painting-image');
+                        
+                        imageDiv.style.backgroundImage = `url(${e.target.result})`;
+                        imageDiv.style.backgroundSize = 'cover';
+                        imageDiv.style.backgroundPosition = 'center';
+                        imageDiv.innerHTML = '';
+                        
+                        uploadedImages[i] = e.target.result;
+                    };
                     
-                    uploadedImages[i] = e.target.result;
-                };
-                
-                reader.readAsDataURL(file);
-            }
-        });
+                    reader.readAsDataURL(file);
+                }
+            });
+        }
 
         document.getElementById('pdfUpload').addEventListener('change', function(e) {
             const file = e.target.files[0];
@@ -586,40 +589,40 @@
             }
         });
 
-        function downloadFullCollection() {
-            if (pdfCollection) {
-                const url = URL.createObjectURL(pdfCollection);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = 'Mountain_Paintings_Collection.pdf';
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObjectURL(url);
-                
-                showNotification('Download started! Thank you for downloading the collection.', 'success');
-            } else {
-                showNotification('Please upload your PDF collection first!', 'warning');
+        function triggerImageUpload() {
+            const imageUpload = document.getElementById('imageUpload');
+            if (imageUpload) {
+                imageUpload.click();
             }
         }
 
+        function downloadFullCollection() {
+            // Direct link to your PDF in the GitHub repository
+            const pdfUrl = './MY mountain painting book!.pdf';
+            const a = document.createElement('a');
+            a.href = pdfUrl;
+            a.download = 'Mountain_Paintings_Collection.pdf';
+            a.target = '_blank'; // Opens in new tab as backup
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            showNotification('Download started! Thank you for downloading the collection.', 'success');
+        }
+
         function downloadPainting(title) {
-            if (pdfCollection) {
-                // In a real implementation, you'd extract individual pages from the PDF
-                // For now, we'll download the full collection with a personalized name
-                const url = URL.createObjectURL(pdfCollection);
-                const a = document.createElement('a');
-                a.href = url;
-                a.download = `${title.replace(/[^a-zA-Z0-9]/g, '_')}_Print.pdf`;
-                document.body.appendChild(a);
-                a.click();
-                document.body.removeChild(a);
-                URL.revokeObject(url);
-                
-                showNotification(`Download started for "${title}"!`, 'success');
-            } else {
-                showNotification('PDF collection not available yet. Please contact the artist!', 'warning');
-            }
+            // For individual paintings, we'll download the full collection
+            // In the future, you could create separate PDF files for each painting
+            const pdfUrl = './MY mountain painting book!.pdf';
+            const a = document.createElement('a');
+            a.href = pdfUrl;
+            a.download = `${title.replace(/[^a-zA-Z0-9]/g, '_')}_from_Collection.pdf`;
+            a.target = '_blank';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            
+            showNotification(`Download started for "${title}"!`, 'success');
         }
 
         function showNotification(message, type) {
