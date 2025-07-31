@@ -51,6 +51,99 @@
             font-weight: 300;
         }
 
+        .download-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .download-title {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .download-text {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+
+        .download-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .download-btn {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+            background: linear-gradient(45deg, #219a52, #27ae60);
+        }
+
+        .download-btn.full-collection {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+        }
+
+        .download-btn.full-collection:hover {
+            background: linear-gradient(45deg, #c0392b, #a93226);
+            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
+        }
+
+        .upload-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .upload-section {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            margin-bottom: 40px;
+        }
+
+        .upload-text {
+            color: #fff;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
         .gallery {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -127,99 +220,6 @@
             color: #666;
             line-height: 1.6;
             font-size: 1rem;
-        }
-
-        .upload-section {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            text-align: center;
-            border: 2px dashed rgba(255, 255, 255, 0.3);
-            margin-bottom: 40px;
-        }
-
-        .upload-text {
-            color: #fff;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .upload-btn {
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            color: white;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-
-        .upload-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
-
-        .download-section {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 30px;
-            text-align: center;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .download-title {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
-
-        .download-text {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 25px;
-            line-height: 1.6;
-        }
-
-        .download-buttons {
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        .download-btn {
-            background: linear-gradient(45deg, #27ae60, #2ecc71);
-            color: white;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 50px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(39, 174, 96, 0.3);
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .download-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
-            background: linear-gradient(45deg, #219a52, #27ae60);
-        }
-
-        .download-btn.full-collection {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
-        }
-
-        .download-btn.full-collection:hover {
-            background: linear-gradient(45deg, #c0392b, #a93226);
-            box-shadow: 0 8px 25px rgba(231, 76, 60, 0.4);
         }
 
         .painting-actions {
@@ -345,6 +345,15 @@
             0% { transform: translateY(100vh) rotate(0deg); }
             100% { transform: translateY(-100px) rotate(360deg); }
         }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
     </style>
 </head>
 <body>
@@ -371,9 +380,9 @@
                 <a href="./MY mountain painting book!.pdf" class="download-btn full-collection" download="Mountain_Paintings_Collection.pdf">
                     📚 Download Full Collection (PDF)
                 </a>
-                <button class="upload-btn" onclick="window.open('./MY mountain painting book!.pdf', '_blank')">
+                <a href="./MY mountain painting book!.pdf" class="upload-btn" target="_blank">
                     👁️ Preview Collection Online
-                </button>
+                </a>
             </div>
         </div>
 
@@ -388,7 +397,7 @@
         </div>
 
         <div class="gallery" id="gallery">
-            <div class="painting-card" onclick="openModal('Misty Morning Peaks', 'A serene dawn breaks over snow-capped mountains, with ethereal mist dancing through ancient pine forests.')">
+            <div class="painting-card">
                 <div class="painting-image">
                     <div class="placeholder-icon">🏔️</div>
                 </div>
@@ -397,7 +406,7 @@
                     <p class="painting-description">A serene dawn breaks over snow-capped mountains, with ethereal mist dancing through ancient pine forests.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Misty Morning Peaks', 'A serene dawn breaks over snow-capped mountains, with ethereal mist dancing through ancient pine forests.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Misty Morning Peaks')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Misty_Morning_Peaks_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -411,7 +420,7 @@
                     <p class="painting-description">Rugged cliffs and pristine valleys capture the raw beauty and peaceful isolation of high mountain wilderness.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Alpine Solitude', 'Rugged cliffs and pristine valleys capture the raw beauty and peaceful isolation of high mountain wilderness.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Alpine Solitude')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Alpine_Solitude_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -425,7 +434,7 @@
                     <p class="painting-description">Golden hour transforms rocky peaks into a symphony of warm colors, painting the sky in brilliant hues.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Sunset Ridge', 'Golden hour transforms rocky peaks into a symphony of warm colors, painting the sky in brilliant hues.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Sunset Ridge')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Sunset_Ridge_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -439,7 +448,7 @@
                     <p class="painting-description">Mirror-like waters perfectly reflect towering granite faces, creating a dreamlike double vision of nature's grandeur.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Crystal Lake Reflection', 'Mirror-like waters perfectly reflect towering granite faces, creating a dreamlike double vision of nature\'s grandeur.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Crystal Lake Reflection')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Crystal_Lake_Reflection_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -453,7 +462,7 @@
                     <p class="painting-description">Dark clouds gather around jagged peaks, capturing the dramatic power and untamed spirit of mountain weather.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Stormy Summits', 'Dark clouds gather around jagged peaks, capturing the dramatic power and untamed spirit of mountain weather.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Stormy Summits')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Stormy_Summits_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -467,7 +476,7 @@
                     <p class="painting-description">Fall colors cascade down mountain slopes, creating a vibrant tapestry of gold, crimson, and emerald.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Autumn Valley', 'Fall colors cascade down mountain slopes, creating a vibrant tapestry of gold, crimson, and emerald.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Autumn Valley')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Autumn_Valley_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -481,7 +490,7 @@
                     <p class="painting-description">Winter transforms waterfalls into crystalline sculptures, adorning the mountainside with nature's ice artistry.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Frozen Cascades', 'Winter transforms waterfalls into crystalline sculptures, adorning the mountainside with nature\'s ice artistry.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Frozen Cascades')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Frozen_Cascades_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -495,7 +504,7 @@
                     <p class="painting-description">Soaring perspectives reveal the vast expanse of mountain ranges stretching endlessly toward distant horizons.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Eagle\'s Domain', 'Soaring perspectives reveal the vast expanse of mountain ranges stretching endlessly toward distant horizons.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Eagle\'s Domain')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Eagles_Domain_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -509,7 +518,7 @@
                     <p class="painting-description">Silver moonlight bathes ancient rock formations, creating mysterious shadows and ethereal beauty in the night.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Moonlit Crags', 'Silver moonlight bathes ancient rock formations, creating mysterious shadows and ethereal beauty in the night.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Moonlit Crags')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Moonlit_Crags_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -523,7 +532,7 @@
                     <p class="painting-description">Wildflowers bloom in alpine meadows as snow begins to retreat, celebrating the renewal of mountain life.</p>
                     <div class="painting-actions">
                         <button class="view-btn" onclick="openModal('Spring Awakening', 'Wildflowers bloom in alpine meadows as snow begins to retreat, celebrating the renewal of mountain life.')">👁️ View Details</button>
-                        <a href="#" class="download-individual" onclick="downloadPainting('Spring Awakening')">⬇️ Download Print</a>
+                        <a href="./MY mountain painting book!.pdf" class="download-individual" download="Spring_Awakening_Print.pdf">⬇️ Download Print</a>
                     </div>
                 </div>
             </div>
@@ -542,167 +551,87 @@
     </div>
 
     <script>
-        let uploadedImages = {};
-        let pdfCollection = null;
-
-        // Check if element exists before adding event listener
-        const imageUploadElement = document.getElementById('imageUpload');
-        if (imageUploadElement) {
-            imageUploadElement.addEventListener('change', function(e) {
-                const files = e.target.files;
-                const gallery = document.getElementById('gallery');
-                const cards = gallery.querySelectorAll('.painting-card');
-                
-                for (let i = 0; i < Math.min(files.length, cards.length); i++) {
-                    const file = files[i];
-                    const reader = new FileReader();
-                    
-                    reader.onload = function(e) {
-                        const card = cards[i];
-                        const imageDiv = card.querySelector('.painting-image');
-                        
-                        imageDiv.style.backgroundImage = `url(${e.target.result})`;
-                        imageDiv.style.backgroundSize = 'cover';
-                        imageDiv.style.backgroundPosition = 'center';
-                        imageDiv.innerHTML = '';
-                        
-                        uploadedImages[i] = e.target.result;
-                    };
-                    
-                    reader.readAsDataURL(file);
-                }
-            });
-        }
-
-        document.getElementById('pdfUpload').addEventListener('change', function(e) {
-            const file = e.target.files[0];
-            if (file && file.type === 'application/pdf') {
-                pdfCollection = file;
-                
-                // Update the download button to show it's ready
-                const downloadBtn = document.querySelector('.download-btn.full-collection');
-                downloadBtn.innerHTML = '✅ Collection Ready - Download PDF';
-                downloadBtn.style.background = 'linear-gradient(45deg, #27ae60, #2ecc71)';
-                
-                // Show success message
-                showNotification('PDF collection uploaded successfully! Visitors can now download it.', 'success');
-            }
-        });
-
         function triggerImageUpload() {
-            const imageUpload = document.getElementById('imageUpload');
+            var imageUpload = document.getElementById('imageUpload');
             if (imageUpload) {
                 imageUpload.click();
             }
         }
 
-        function downloadFullCollection() {
-            // Direct link to your PDF in the GitHub repository
-            const pdfUrl = './MY mountain painting book!.pdf';
-            const a = document.createElement('a');
-            a.href = pdfUrl;
-            a.download = 'Mountain_Paintings_Collection.pdf';
-            a.target = '_blank'; // Opens in new tab as backup
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            
-            showNotification('Download started! Thank you for downloading the collection.', 'success');
-        }
-
-        function downloadPainting(title) {
-            // For individual paintings, we'll download the full collection
-            // In the future, you could create separate PDF files for each painting
-            const pdfUrl = './MY mountain painting book!.pdf';
-            const a = document.createElement('a');
-            a.href = pdfUrl;
-            a.download = `${title.replace(/[^a-zA-Z0-9]/g, '_')}_from_Collection.pdf`;
-            a.target = '_blank';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            
-            showNotification(`Download started for "${title}"!`, 'success');
-        }
-
         function showNotification(message, type) {
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 20px;
-                right: 20px;
-                padding: 15px 25px;
-                border-radius: 10px;
-                color: white;
-                font-weight: 500;
-                z-index: 10000;
-                animation: slideIn 0.3s ease;
-                max-width: 300px;
-                background: ${type === 'success' ? 'linear-gradient(45deg, #27ae60, #2ecc71)' : 'linear-gradient(45deg, #f39c12, #e67e22)'};
-                box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            `;
+            var notification = document.createElement('div');
+            notification.style.cssText = 'position: fixed; top: 20px; right: 20px; padding: 15px 25px; border-radius: 10px; color: white; font-weight: 500; z-index: 10000; animation: slideIn 0.3s ease; max-width: 300px; background: ' + (type === 'success' ? 'linear-gradient(45deg, #27ae60, #2ecc71)' : 'linear-gradient(45deg, #f39c12, #e67e22)') + '; box-shadow: 0 5px 15px rgba(0,0,0,0.2);';
             
             notification.textContent = message;
             document.body.appendChild(notification);
             
-            setTimeout(() => {
+            setTimeout(function() {
                 notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => document.body.removeChild(notification), 300);
+                setTimeout(function() {
+                    if (notification.parentNode) {
+                        document.body.removeChild(notification);
+                    }
+                }, 300);
             }, 3000);
         }
 
         function openModal(title, description) {
-            const modal = document.getElementById('modal');
-            const modalBody = document.getElementById('modal-body');
+            var modal = document.getElementById('modal');
+            var modalBody = document.getElementById('modal-body');
             
-            modalBody.innerHTML = `
-                <h2 style="margin-bottom: 20px; color: #2c3e50;">${title}</h2>
-                <div style="margin-bottom: 20px; text-align: center;">
-                    <div style="width: 100%; max-width: 500px; height: 300px; background: linear-gradient(45deg, #f0f0f0, #e0e0e0); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto;">
-                        <span style="font-size: 3rem; color: #999;">🏔️</span>
-                    </div>
-                </div>
-                <p style="line-height: 1.6; color: #666; font-size: 1.1rem; margin-bottom: 25px;">${description}</p>
-                <div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 20px;">
-                    <button onclick="downloadPainting('${title}')" style="background: linear-gradient(45deg, #27ae60, #2ecc71); color: white; padding: 12px 25px; border: none; border-radius: 25px; cursor: pointer; font-size: 1rem;">
-                        ⬇️ Download Print (PDF)
-                    </button>
-                </div>
-                <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center;">
-                    <p style="font-style: italic; color: #999; font-size: 0.9rem;">Perfect for framing • High-quality print ready • Click outside to close</p>
-                </div>
-            `;
-            
-            modal.style.display = 'block';
+            if (modal && modalBody) {
+                modalBody.innerHTML = '<h2 style="margin-bottom: 20px; color: #2c3e50;">' + title + '</h2><div style="margin-bottom: 20px; text-align: center;"><div style="width: 100%; max-width: 500px; height: 300px; background: linear-gradient(45deg, #f0f0f0, #e0e0e0); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin: 0 auto;"><span style="font-size: 3rem; color: #999;">🏔️</span></div></div><p style="line-height: 1.6; color: #666; font-size: 1.1rem; margin-bottom: 25px;">' + description + '</p><div style="display: flex; gap: 15px; justify-content: center; margin-bottom: 20px;"><a href="./MY mountain painting book!.pdf" download="' + title.replace(/[^a-zA-Z0-9]/g, '_') + '_Print.pdf" style="background: linear-gradient(45deg, #27ae60, #2ecc71); color: white; padding: 12px 25px; border: none; border-radius: 25px; cursor: pointer; font-size: 1rem; text-decoration: none;">⬇️ Download Print (PDF)</a></div><div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; text-align: center;"><p style="font-style: italic; color: #999; font-size: 0.9rem;">Perfect for framing • High-quality print ready • Click outside to close</p></div>';
+                
+                modal.style.display = 'block';
+            }
         }
 
         function closeModal() {
-            document.getElementById('modal').style.display = 'none';
+            var modal = document.getElementById('modal');
+            if (modal) {
+                modal.style.display = 'none';
+            }
         }
 
-        window.addEventListener('click', function(e) {
-            const modal = document.getElementById('modal');
-            if (e.target === modal) {
+        // Simple event handling without addEventListener
+        window.onclick = function(event) {
+            var modal = document.getElementById('modal');
+            if (event.target === modal) {
                 closeModal();
             }
-        });
+        };
 
-        // Add CSS animations
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
+        // Handle image upload
+        window.onload = function() {
+            var imageUpload = document.getElementById('imageUpload');
+            if (imageUpload) {
+                imageUpload.onchange = function(e) {
+                    var files = e.target.files;
+                    var gallery = document.getElementById('gallery');
+                    var cards = gallery ? gallery.querySelectorAll('.painting-card') : [];
+                    
+                    for (var i = 0; i < Math.min(files.length, cards.length); i++) {
+                        var file = files[i];
+                        var reader = new FileReader();
+                        var card = cards[i];
+                        
+                        reader.onload = (function(cardElement) {
+                            return function(e) {
+                                var imageDiv = cardElement.querySelector('.painting-image');
+                                if (imageDiv) {
+                                    imageDiv.style.backgroundImage = 'url(' + e.target.result + ')';
+                                    imageDiv.style.backgroundSize = 'cover';
+                                    imageDiv.style.backgroundPosition = 'center';
+                                    imageDiv.innerHTML = '';
+                                }
+                            };
+                        })(card);
+                        
+                        reader.readAsDataURL(file);
+                    }
+                };
             }
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>)';
-            });
-        });
+        };
     </script>
 </body>
 </html>
